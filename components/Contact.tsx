@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, MessageCircle } from 'lucide-react'
 
 const servicesList = [
   'Asesoría contable',
@@ -125,7 +125,34 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 mt-1">
+                  <MessageCircle className="w-6 h-6 text-elegant-gold" />
+                </div>
+                <div>
+                  <p className="text-gray-600 font-sans mb-1">WhatsApp</p>
+                  <a
+                    href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20servicios."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-900 font-sans text-lg hover:text-elegant-gold transition-colors"
+                  >
+                    8888-9999
+                  </a>
+                </div>
+              </div>
             </div>
+
+            <a
+              href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20solicitar%20asesoría%20profesional."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-3 bg-green-500 text-white px-6 py-3 font-serif font-semibold text-lg rounded hover:bg-green-600 transition-colors duration-300 shadow-lg"
+            >
+              <MessageCircle className="w-5 h-5" />
+              CONTACTAR POR WHATSAPP
+            </a>
           </div>
 
           {/* Contact Form */}

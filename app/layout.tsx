@@ -1,5 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import WhatsAppButton from '@/components/WhatsAppButton'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export const metadata: Metadata = {
   title: 'HSGAC INTERNACIONAL S.A. - Servicios Contables y Financieros',
@@ -14,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="overflow-x-hidden">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   )
 }
