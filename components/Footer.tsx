@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="text-xs md:text-sm font-sans opacity-75 mt-2">
               Build by{' '}
               <a
-                href="https://www.yieldge.com/cr/mision"
+                href="https://www.yieldge.com/cr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-100 transition-opacity underline"
