@@ -13,6 +13,17 @@ export default function Footer() {
             <p className="text-xs md:text-sm font-sans opacity-75">
               © {new Date().getFullYear()} HSGAC INTERNACIONAL S.A. Todos los derechos reservados.
             </p>
+            <p className="text-xs md:text-sm font-sans opacity-75 mt-2">
+              Build by{' '}
+              <a
+                href="https://www.yieldge.com/cr/mision"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-100 transition-opacity underline"
+              >
+                Yieldge
+              </a>
+            </p>
           </div>
         </div>
       </div>
