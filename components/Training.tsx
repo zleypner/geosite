@@ -12,26 +12,32 @@ const trainingServices = [
   {
     icon: Target,
     title: 'Diseño de programas de formación personalizados',
+    description: 'Creación de planes de formación adaptados a las necesidades específicas de la empresa o del equipo, alineados con sus objetivos y realidad operativa.',
   },
   {
     icon: GraduationCap,
     title: 'Capacitaciones técnicas especializadas',
+    description: 'Formación práctica y actualizada en áreas técnicas específicas para fortalecer competencias profesionales y mejorar el desempeño laboral.',
   },
   {
     icon: Heart,
     title: 'Desarrollo de habilidades humanas y blandas',
+    description: 'Entrenamiento enfocado en habilidades como comunicación, liderazgo, manejo del tiempo y resolución de conflictos.',
   },
   {
     icon: Crown,
     title: 'Formación gerencial y liderazgo',
+    description: 'Capacitación dirigida a líderes y mandos medios para mejorar la toma de decisiones, la gestión de equipos y el liderazgo efectivo.',
   },
   {
     icon: MessageSquare,
     title: 'Talleres de comunicación y trabajo en equipo',
+    description: 'Espacios prácticos para fortalecer la comunicación interna, la colaboración y la cohesión entre los miembros del equipo.',
   },
   {
     icon: Cog,
     title: 'Capacitación en gestión administrativa y organizacional',
+    description: 'Formación orientada a mejorar la organización, los procesos administrativos y la eficiencia operativa de la empresa.',
   },
 ]
 
@@ -63,14 +69,27 @@ export default function Training() {
             return (
               <div
                 key={index}
-                className="border-2 border-elegant-gold rounded-lg p-6 flex items-start gap-4 hover:bg-elegant-gold/10 transition-colors duration-300"
+                className="group h-40 md:h-44 [perspective:1000px]"
               >
-                <div className="flex-shrink-0">
-                  <IconComponent className="w-6 h-6 text-elegant-gold" />
+                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Front Face */}
+                  <div className="absolute inset-0 border-2 border-elegant-gold rounded-lg p-6 flex items-center gap-4 [backface-visibility:hidden]">
+                    <div className="flex-shrink-0">
+                      <IconComponent className="w-6 h-6 text-elegant-gold" />
+                    </div>
+                    <p className="text-elegant-gold font-sans text-sm md:text-base leading-relaxed">
+                      {service.title}
+                    </p>
+                  </div>
+
+                  {/* Back Face */}
+                  <div className="absolute inset-0 bg-elegant-gold rounded-lg p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <IconComponent className="w-6 h-6 text-corporate-dark-green mb-3" />
+                    <p className="text-corporate-dark-green font-sans text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-                <p className="text-elegant-gold font-sans text-sm md:text-base leading-relaxed">
-                  {service.title}
-                </p>
               </div>
             )
           })}
@@ -78,13 +97,26 @@ export default function Training() {
 
         {/* Additional service box */}
         <div className="max-w-md mx-auto">
-          <div className="border-2 border-elegant-gold rounded-lg p-6 flex items-start gap-4 hover:bg-elegant-gold/10 transition-colors duration-300">
-            <div className="flex-shrink-0">
-              <RefreshCw className="w-6 h-6 text-elegant-gold" />
+          <div className="group h-40 md:h-44 [perspective:1000px]">
+            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              {/* Front Face */}
+              <div className="absolute inset-0 border-2 border-elegant-gold rounded-lg p-6 flex items-center gap-4 [backface-visibility:hidden]">
+                <div className="flex-shrink-0">
+                  <RefreshCw className="w-6 h-6 text-elegant-gold" />
+                </div>
+                <p className="text-elegant-gold font-sans text-sm md:text-base leading-relaxed">
+                  Programas de actualización profesional
+                </p>
+              </div>
+
+              {/* Back Face */}
+              <div className="absolute inset-0 bg-elegant-gold rounded-lg p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                <RefreshCw className="w-6 h-6 text-corporate-dark-green mb-3" />
+                <p className="text-corporate-dark-green font-sans text-sm leading-relaxed">
+                  Capacitaciones diseñadas para mantener a los profesionales actualizados en tendencias, normativas y buenas prácticas de su área.
+                </p>
+              </div>
             </div>
-            <p className="text-elegant-gold font-sans text-sm md:text-base leading-relaxed">
-              Programas de actualización profesional
-            </p>
           </div>
         </div>
       </div>
