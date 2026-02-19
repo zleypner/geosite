@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -52,9 +53,16 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-elegant-gold font-serif text-lg sm:text-xl md:text-2xl font-bold hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             >
-              HSGAC INTERNACIONAL
+              <Image
+                src="/logo.png"
+                alt="HSGAC INTERNACIONAL"
+                width={180}
+                height={50}
+                className="h-10 md:h-12 w-auto"
+                priority
+              />
             </button>
           </div>
 
