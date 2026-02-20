@@ -16,6 +16,13 @@ import {
   ClipboardList,
   Search,
   FileBarChart,
+  Target,
+  GraduationCap,
+  Heart,
+  Crown,
+  MessageSquare,
+  Cog,
+  RefreshCw,
 } from 'lucide-react'
 
 const services = [
@@ -106,6 +113,44 @@ const services = [
   },
 ]
 
+const trainingServices = [
+  {
+    icon: Target,
+    title: 'Diseño de programas de formación personalizados',
+    description: 'Creación de planes de formación adaptados a las necesidades específicas de la empresa o del equipo, alineados con sus objetivos y realidad operativa.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Capacitaciones técnicas especializadas',
+    description: 'Formación práctica y actualizada en áreas técnicas específicas para fortalecer competencias profesionales y mejorar el desempeño laboral.',
+  },
+  {
+    icon: Heart,
+    title: 'Desarrollo de habilidades humanas y blandas',
+    description: 'Entrenamiento enfocado en habilidades como comunicación, liderazgo, manejo del tiempo y resolución de conflictos.',
+  },
+  {
+    icon: Crown,
+    title: 'Formación gerencial y liderazgo',
+    description: 'Capacitación dirigida a líderes y mandos medios para mejorar la toma de decisiones, la gestión de equipos y el liderazgo efectivo.',
+  },
+  {
+    icon: MessageSquare,
+    title: 'Talleres de comunicación y trabajo en equipo',
+    description: 'Espacios prácticos para fortalecer la comunicación interna, la colaboración y la cohesión entre los miembros del equipo.',
+  },
+  {
+    icon: Cog,
+    title: 'Capacitación en gestión administrativa y organizacional',
+    description: 'Formación orientada a mejorar la organización, los procesos administrativos y la eficiencia operativa de la empresa.',
+  },
+  {
+    icon: RefreshCw,
+    title: 'Programas de actualización profesional',
+    description: 'Capacitaciones diseñadas para mantener a los profesionales actualizados en tendencias, normativas y buenas prácticas de su área.',
+  },
+]
+
 export default function Services() {
   return (
     <section id="services" className="py-16 md:py-24 bg-gray-50">
@@ -150,6 +195,53 @@ export default function Services() {
               </div>
             )
           })}
+        </div>
+
+        {/* Capacitaciones Section */}
+        <div className="mt-20 md:mt-28 bg-corporate-dark-green rounded-2xl p-8 md:p-12">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-elegant-gold text-sm md:text-base font-sans uppercase tracking-wider mb-2">
+              FORMACIÓN CORPORATIVA
+            </p>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white mb-6">
+              Programas de capacitación empresarial diseñados a la medida
+            </h3>
+            <p className="text-white text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+              Desarrollamos programas formativos enfocados en competencias técnicas, humanas y gerenciales, alineados con las necesidades reales de cada organización.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {trainingServices.map((service, index) => {
+              const IconComponent = service.icon
+              return (
+                <div
+                  key={index}
+                  className="group h-40 md:h-44 [perspective:1000px]"
+                >
+                  <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                    {/* Front Face */}
+                    <div className="absolute inset-0 border-2 border-elegant-gold rounded-lg p-6 flex items-center gap-4 [backface-visibility:hidden]">
+                      <div className="flex-shrink-0">
+                        <IconComponent className="w-6 h-6 text-elegant-gold" />
+                      </div>
+                      <p className="text-elegant-gold font-sans text-sm md:text-base leading-relaxed">
+                        {service.title}
+                      </p>
+                    </div>
+
+                    {/* Back Face */}
+                    <div className="absolute inset-0 bg-elegant-gold rounded-lg p-6 flex flex-col items-center justify-center text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                      <IconComponent className="w-6 h-6 text-corporate-dark-green mb-3" />
+                      <p className="text-corporate-dark-green font-sans text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
