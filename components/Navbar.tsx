@@ -36,10 +36,8 @@ export default function Navbar() {
 
   const navLinks = [
     { id: 'hero', label: 'INICIO' },
-    { id: 'about', label: 'NOSOTROS' },
     { id: 'services', label: 'SERVICIOS' },
-    { id: 'training', label: 'CAPACITACIONES' },
-    { id: 'principles', label: 'PRINCIPIOS' },
+    { id: 'about', label: 'NOSOTROS' },
     { id: 'contact', label: 'CONTACTO' },
   ]
 
@@ -60,7 +58,7 @@ export default function Navbar() {
                 alt="HSGAC INTERNACIONAL"
                 width={180}
                 height={50}
-                className="h-10 md:h-12 w-auto"
+                className="h-10 md:h-12 w-auto rounded-lg"
                 priority
               />
             </button>
