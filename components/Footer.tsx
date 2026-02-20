@@ -3,9 +3,6 @@ export default function Footer() {
     <footer className="bg-corporate-dark-green text-elegant-gold py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h3 className="text-xl md:text-2xl font-serif font-bold mb-4">
-            HSGAC INTERNACIONAL S.A.
-          </h3>
           <p className="text-sm md:text-base font-sans mb-4 opacity-90">
             Servicios contables, financieros y capacitaciones empresariales
           </p>
