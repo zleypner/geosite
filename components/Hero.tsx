@@ -24,7 +24,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full px-4 sm:px-0">
           <a
-            href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios."
+            href="https://wa.me/50687935137?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-elegant-gold text-corporate-dark-green px-6 py-3 md:px-10 md:py-4 font-serif font-semibold text-sm sm:text-base md:text-lg rounded hover:bg-light-gold transition-colors duration-300 shadow-lg text-center"
@@ -33,7 +33,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20agendar%20una%20consulta."
+            href="https://wa.me/50687935137?text=Hola,%20me%20gustaría%20agendar%20una%20consulta."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto border-2 border-elegant-gold text-white px-6 py-3 md:px-10 md:py-4 font-serif font-semibold text-sm sm:text-base md:text-lg rounded hover:bg-elegant-gold/10 transition-colors duration-300 text-center"

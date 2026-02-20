@@ -54,12 +54,12 @@ export default function Contact() {
               <div>
                 <p className="text-gray-600 font-sans mb-1">WhatsApp</p>
                 <a
-                  href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20servicios."
+                  href="https://wa.me/50687935137?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20servicios."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-900 font-sans text-lg hover:text-elegant-gold transition-colors"
                 >
-                  8888-9999
+                  8793-5137
                 </a>
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function Contact() {
 
           <div className="text-center mt-8">
             <a
-              href="https://wa.me/50688889999?text=Hola,%20me%20gustaría%20solicitar%20asesoría%20profesional."
+              href="https://wa.me/50687935137?text=Hola,%20me%20gustaría%20solicitar%20asesoría%20profesional."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-green-500 text-white px-6 py-3 font-serif font-semibold text-lg rounded hover:bg-green-600 transition-colors duration-300 shadow-lg"
