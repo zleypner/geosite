@@ -33,19 +33,17 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-elegant-gold/30 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <div className="flex items-center gap-4">
-              <Image
-                src="/assets/HS_WBG_WHITE.webp"
-                alt="HSGAC Logo"
-                width={120}
-                height={60}
-                className="h-14 w-auto"
-              />
-              <p className="text-xs md:text-sm font-sans opacity-75">
-                © {new Date().getFullYear()} HSGAC INTERNACIONAL S.A. Todos los derechos reservados.
-              </p>
-            </div>
+          <div className="flex flex-col items-center gap-4">
+            <Image
+              src="/assets/HS_WBG_WHITE.webp"
+              alt="HSGAC Logo"
+              width={120}
+              height={60}
+              className="h-14 w-auto"
+            />
+            <p className="text-xs md:text-sm font-sans opacity-75 text-center">
+              © {new Date().getFullYear()} HSGAC INTERNACIONAL S.A. Todos los derechos reservados.
+            </p>
           </div>
           <p className="text-xs md:text-sm font-sans opacity-75 text-center mt-6">
             Build by{' '}
