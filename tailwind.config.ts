@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'corporate-green': '#1a4d3a',
-        'corporate-dark-green': '#0d2818',
+        'corporate-green': '#1e5a44',
+        'corporate-dark-green': '#113320',
         'elegant-gold': '#d4af37',
         'light-gold': '#f4e4bc',
       },
