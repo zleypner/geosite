@@ -43,3 +43,25 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #113320;
 }
+
+/* Service card highlight animation */
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 165, 97, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(197, 165, 97, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 165, 97, 0);
+  }
+}
+
+.service-card:target {
+  animation: highlight-pulse 1.5s ease-out;
+}
+
+.service-card:target > div > div:first-child {
+  border-color: #c5a561 !important;
+  border-width: 2px;
+}

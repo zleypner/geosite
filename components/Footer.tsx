@@ -1,5 +1,3 @@
-'use client'
-
 const topServices = [
   { name: 'Asesoría contable para empresas', id: 'asesoria-contable' },
   { name: 'Auditoría administrativa', id: 'auditoria-administrativa' },
@@ -9,13 +7,6 @@ const topServices = [
 ]
 
 export default function Footer() {
-  const scrollToService = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <footer className="bg-corporate-dark-green text-elegant-gold py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,12 +18,12 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {topServices.map((service) => (
               <li key={service.id}>
-                <button
-                  onClick={() => scrollToService(service.id)}
-                  className="text-sm opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
+                <a
+                  href={`#${service.id}`}
+                  className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
                   {service.name}
-                </button>
+                </a>
               </li>
             ))}
           </ul>

@@ -196,7 +196,7 @@ export default function Services() {
               <div
                 key={index}
                 id={service.id}
-                className="group h-64 md:h-72 [perspective:1000px] scroll-mt-24"
+                className="service-card group h-64 md:h-72 [perspective:1000px] scroll-mt-24"
               >
                 <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front Face */}
@@ -243,7 +243,7 @@ export default function Services() {
                 <div
                   key={index}
                   id={service.id}
-                  className="group h-40 md:h-44 [perspective:1000px] scroll-mt-24"
+                  className="service-card group h-40 md:h-44 [perspective:1000px] scroll-mt-24"
                 >
                   <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     {/* Front Face */}
