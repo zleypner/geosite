@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const topServices = [
   { name: 'Asesoría contable para empresas', id: 'asesoria-contable' },
   { name: 'Auditoría administrativa', id: 'auditoria-administrativa' },
@@ -31,22 +33,31 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="border-t border-elegant-gold/30 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs md:text-sm font-sans opacity-75">
-              © {new Date().getFullYear()} HSGAC INTERNACIONAL S.A. Todos los derechos reservados.
-            </p>
-            <p className="text-xs md:text-sm font-sans opacity-75">
-              Build by{' '}
-              <a
-                href="https://www.yieldge.com/cr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-100 transition-opacity underline"
-              >
-                Yieldge
-              </a>
-            </p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/assets/HS_WBG_WHITE.webp"
+                alt="HSGAC Logo"
+                width={120}
+                height={60}
+                className="h-14 w-auto"
+              />
+              <p className="text-xs md:text-sm font-sans opacity-75">
+                © {new Date().getFullYear()} HSGAC INTERNACIONAL S.A. Todos los derechos reservados.
+              </p>
+            </div>
           </div>
+          <p className="text-xs md:text-sm font-sans opacity-75 text-center mt-6">
+            Build by{' '}
+            <a
+              href="https://www.yieldge.com/cr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-100 transition-opacity underline"
+            >
+              Yieldge
+            </a>
+          </p>
         </div>
       </div>
     </footer>
