@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -42,17 +43,32 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-corporate-dark-green shadow-lg' : 'bg-corporate-dark-green'
+      isScrolled ? 'bg-white shadow-lg' : 'bg-white'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex-shrink-0 cursor-pointer"
+          >
+            <Image
+              src="/logo.png"
+              alt="GeoSite Logo"
+              width={120}
+              height={40}
+              className="h-10 md:h-12 w-auto"
+              priority
+            />
+          </button>
+
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8 ml-auto md:ml-0 mr-auto">
+          <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-elegant-gold font-serif text-sm lg:text-base hover:opacity-80 transition-opacity"
+                className="text-corporate-dark-green font-serif text-sm lg:text-base hover:opacity-80 transition-opacity"
               >
                 {link.label}
               </button>
@@ -63,7 +79,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-elegant-gold p-2 -mr-2"
+              className="text-corporate-dark-green p-2 -mr-2"
               aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
               aria-expanded={isMobileMenuOpen}
             >
@@ -83,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`md:hidden fixed inset-0 top-16 bg-corporate-dark-green transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 top-16 bg-white transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -92,7 +108,7 @@ export default function Navbar() {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="text-elegant-gold font-serif text-xl hover:opacity-80 transition-opacity"
+              className="text-corporate-dark-green font-serif text-xl hover:opacity-80 transition-opacity"
             >
               {link.label}
             </button>
