@@ -1,31 +1,16 @@
 const services = [
-  'Actualización de libros legales',
-  'Asesoría contable para empresas y emprendedores',
-  'Auditoría administrativa y revisión de procesos internos',
-  'Cálculo de aguinaldo y liquidaciones laborales',
-  'Catálogo de cuentas',
-  'Conciliación de cuentas bancarias',
-  'Consultoría financiera y control de gastos',
-  'Contabilidad general y registros contables',
-  'Costeo de importaciones',
-  'Declaraciones tributarias y cumplimiento fiscal',
-  'Elaboración de estados financieros',
-  'Flujo de caja proyectado',
-  'Gestión de planillas, provisiones y cargas sociales',
-  'Inscripción de contribuyente',
-  'Levantamiento e inventarios',
-  'Proceso de fiscalización',
-  'Servicios contables del régimen simplificado',
+  'Asesoría contable para empresas',
+  'Contabilidad general',
+  'Declaraciones tributarias',
+  'Estados financieros',
+  'Gestión de planillas',
+  'Auditoría administrativa',
 ]
 
 const trainingServices = [
-  'Diseño de programas de formación personalizados',
-  'Capacitaciones técnicas especializadas',
-  'Desarrollo de habilidades humanas y blandas',
+  'Capacitaciones técnicas',
   'Formación gerencial y liderazgo',
-  'Talleres de comunicación y trabajo en equipo',
-  'Capacitación en gestión administrativa y organizacional',
-  'Programas de actualización profesional',
+  'Habilidades blandas',
 ]
 
 export default function Footer() {
@@ -33,13 +18,13 @@ export default function Footer() {
     <footer className="bg-corporate-dark-green text-elegant-gold py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Services Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
           {/* Servicios Contables */}
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="font-serif font-semibold text-lg mb-4">
-              Servicios Contables y Financieros
+              Servicios Contables
             </h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+            <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
                   {service}
