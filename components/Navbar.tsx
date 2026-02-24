@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -47,25 +46,8 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src="/logo.png"
-                alt="HSGAC INTERNACIONAL"
-                width={180}
-                height={50}
-                className="h-10 md:h-12 w-auto rounded-lg"
-                priority
-              />
-            </button>
-          </div>
-
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8">
+          <div className="hidden md:flex space-x-6 lg:space-x-8 ml-auto md:ml-0 mr-auto">
             {navLinks.map((link) => (
               <button
                 key={link.id}
