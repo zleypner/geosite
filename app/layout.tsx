@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Servicios contables, financieros y capacitaciones empresariales con estándares profesionales de excelencia. Acompañamos a organizaciones y emprendedores en el orden financiero, el cumplimiento normativo y la toma de decisiones estratégicas.',
   keywords: 'contabilidad, servicios financieros, capacitación empresarial, asesoría contable, Costa Rica',
   icons: {
-    icon: '/favicon.png',
+    icon: '/assets/favicon.png',
   },
 }
 
