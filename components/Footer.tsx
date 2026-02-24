@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const topServices = [
   { name: 'Asesoría contable para empresas', id: 'asesoria-contable' },
   { name: 'Auditoría administrativa', id: 'auditoria-administrativa' },
@@ -12,17 +10,6 @@ export default function Footer() {
   return (
     <footer className="bg-corporate-dark-green text-elegant-gold py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <div className="flex justify-center mb-8">
-          <Image
-            src="/logow.png"
-            alt="HSGAC Logo"
-            width={150}
-            height={50}
-            className="h-12 md:h-14 w-auto"
-          />
-        </div>
-
         {/* Services Section */}
         <div className="text-center mb-12">
           <h3 className="font-serif font-semibold text-lg mb-4">
